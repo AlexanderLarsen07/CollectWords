@@ -1,4 +1,44 @@
-h1 {
-    font-size: 50px;
-    color: blue;
+.word-collector {
+  box-sizing: border-box;
+  width: 636px;
+  min-height: 126px;
+  margin: 14px 7px;
+  padding: 43px 44px;
+  border: 2px solid #333;
+}
+
+.word-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+}
+
+.word-controls input {
+  box-sizing: border-box;
+  width: 265px;
+  height: 36px;
+  padding: 2px;
+  font-size: 20px;
+}
+
+.word-controls button {
+  min-height: 36px;
+  padding: 4px 14px;
+  font-size: 20px;
+}
+
+.message:not(:empty) {
+  margin-top: 12px;
+}
+
+@media (max-width: 660px) {
+  .word-collector {
+    width: calc(100% - 14px);
+    padding: 24px;
   }
+
+  .word-controls {
+    flex-wrap: wrap;
+  }
+}
